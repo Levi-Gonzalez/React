@@ -43,8 +43,8 @@
 
 ul{
   display: flex;
-  justify-content: space-between;
   list-style: none;
+  justify-content: space-evenly;
 }
 
 li a{
@@ -62,4 +62,7 @@ color: rgb(80, 249, 204);
 }
 .logoReact{
   width: 30px;
+}
+.carrito img{  
+  width: 40px;
 }

@@ -2,12 +2,14 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 function App() {
   const [count, setCount] = useState(0)
   return (
     <div className="App"> 
     <NavBar />
+    <ItemListContainer />
       <div>
         <p>Sitio oficial de <a className='linkReact' href="#">React</a></p>
         <a href="https://vitejs.dev" target="_blank">
