@@ -2,6 +2,7 @@ import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
 function App() {
@@ -28,12 +29,8 @@ function App() {
           Contador de click {count}
         </button>
         <p>
-          <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
