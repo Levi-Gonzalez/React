@@ -17,6 +17,10 @@ const ItemCount = ({initial=1, stock =10, onAdd}) => {
         setCount (count -1)
     }
   }
+   const handleAddToCart = () => {
+   onAdd(count) 
+  }
+
   
   return (
     <div className='botones card '>
@@ -24,9 +28,11 @@ const ItemCount = ({initial=1, stock =10, onAdd}) => {
         <br />
         <h6>Perfume Paco Rabanne</h6>
         <label> {count} </label>
-        <button className='btn btn-success'onClick={handleAdd}>+++</button>
-        <button className='btn btn-danger' onClick={handleRemove}>---</button>
-        <button className='btn btn-warning'>Agregar al carrito</button>
+        <button className='btn btn-success'onClick={handleAdd}>+</button>
+        <br />
+        <button className='btn btn-danger' onClick={handleRemove}>-</button>
+        <br />
+        <button className='btn btn-warning'onClick={handleAddToCart}>Agregar al carrito</button>
     </div>
   )
 }
