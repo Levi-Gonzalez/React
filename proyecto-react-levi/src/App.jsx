@@ -12,7 +12,6 @@ function App() {
     <NavBar />
     <ItemListContainer saludo={"Mi primer prop en react"} />
       <div>
-        <p>Sitio oficial de <a className='linkReact' href="#">React</a></p>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
@@ -20,13 +19,13 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
       <div className="card">
         <p>
         Hola Levi, bienvenido a React!
         </p>
         <button onClick={() => setCount((count) => count + 1)}>
-          Contador de click {count}
+        <a className='linkReact' href="#">React</a>
+        <p>Contador de click {count}</p>  
         </button>
         <p>
         </p>
