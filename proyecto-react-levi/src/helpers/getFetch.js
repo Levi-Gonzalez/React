@@ -2,7 +2,7 @@ export
 let productos = [
 {
     id:"1",
-    nombre: "Le Male Le",
+    nombre: "Le Male Le  Iván",
     imagen:"https://http2.mlstatic.com/D_NQ_NP_685366-MLA47602420663_092021-O.webp",
     categoria: "perfume",
     precio: 27000,
@@ -30,6 +30,13 @@ let productos = [
 },
 {
     id:"5",
+    nombre: "Starwalker",
+    imagen:"https://http2.mlstatic.com/D_NQ_NP_602421-MLA45464416757_042021-O.webp",
+    categoria: "perfume",
+    precio: 23800,
+},
+{
+    id:"6",
     nombre: "Starwalker",
     imagen:"https://http2.mlstatic.com/D_NQ_NP_602421-MLA45464416757_042021-O.webp",
     categoria: "perfume",

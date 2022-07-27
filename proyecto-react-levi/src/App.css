@@ -67,7 +67,7 @@ color: rgb(80, 249, 204);
 }
 .carrito img{  
   width: 40px;
-}
+} 
 .botones{
   display: flex;
   justify-content: center;
@@ -82,4 +82,13 @@ color: rgb(80, 249, 204);
   justify-content: center;
   display: flex;
 
+}
+.navbar{
+  background-color: rgba(2, 23, 72, 0.873);
+}
+.containerCard{
+  margin: 6rem;
+}
+.navIcono{
+  color: white;
 }

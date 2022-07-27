@@ -13,7 +13,6 @@ import { ItemList } from "../ItemList/ItemList";
         const onAdd = (cantidad) => {
         // console.log(`La cantidad es : ${cantidad}`);
   }   
-
   useEffect (()=>{
     getFetch ()
     .then (respuesta => setProductos (respuesta))
@@ -28,9 +27,11 @@ import { ItemList } from "../ItemList/ItemList";
             <span class="sr-only"></span>
             </div>
 
-          : <h3>Hola, bienvenido a mi tienda!</h3> 
+          : <div>
+            <ItemList productos={productos} /> 
+          </div>
+        
         }
-        <ItemList productos={productos} /> 
       </div>
       )
     } 
