@@ -16,7 +16,6 @@ function App() {
 
   const [count, setCount] = useState(0)
   return (
-<<<<<<< HEAD
     <BrowserRouter>
         <div className="App"> 
           <NavBar />
@@ -39,31 +38,6 @@ function App() {
       //   </a>
       // </div>
 
-=======
-    <div className="App"> 
-    <NavBar />
-    <ItemListContainer saludo={"Mi primer prop en react"} />
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <div className="card">
-        <p>
-        Hola Levi, bienvenido a React!
-        </p>
-        <button onClick={() => setCount((count) => count + 1)}>
-        <a className='linkReact' href="#">React</a>
-        <p>Contador de click {count}</p>  
-        </button>
-        <p>
-        </p>
-      </div>
-    </div>
->>>>>>> 86cdbfa87ad6ca257ae829ef20d302ff6428b2a2
   )
 }
 

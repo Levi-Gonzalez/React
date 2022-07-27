@@ -2,11 +2,7 @@ export
 let productos = [
 {
     id:"1",
-<<<<<<< HEAD
-    nombre: "Le Male Le  Iván",
-=======
     nombre: "Le Male Le",
->>>>>>> 86cdbfa87ad6ca257ae829ef20d302ff6428b2a2
     imagen:"https://http2.mlstatic.com/D_NQ_NP_685366-MLA47602420663_092021-O.webp",
     categoria: "perfume",
     precio: 27000,
@@ -38,7 +34,6 @@ let productos = [
     imagen:"https://http2.mlstatic.com/D_NQ_NP_602421-MLA45464416757_042021-O.webp",
     categoria: "perfume",
     precio: 23800,
-<<<<<<< HEAD
 },
 {
     id:"6",
@@ -46,8 +41,7 @@ let productos = [
     imagen:"https://http2.mlstatic.com/D_NQ_NP_602421-MLA45464416757_042021-O.webp",
     categoria: "perfume",
     precio: 23800,
-=======
->>>>>>> 86cdbfa87ad6ca257ae829ef20d302ff6428b2a2
+
 }
 ]
 
