@@ -82,6 +82,7 @@ color: rgb(80, 249, 204);
   justify-content: center;
   display: flex;
 
+<<<<<<< HEAD
 }
 .navbar{
   background-color: rgba(2, 23, 72, 0.873);
@@ -91,4 +92,6 @@ color: rgb(80, 249, 204);
 }
 .navIcono{
   color: white;
+=======
+>>>>>>> 86cdbfa87ad6ca257ae829ef20d302ff6428b2a2
 }
