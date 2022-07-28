@@ -32,24 +32,28 @@ let productos = [
     id:"5",
     nombre: "Starwalker",
     imagen:"https://http2.mlstatic.com/D_NQ_NP_602421-MLA45464416757_042021-O.webp",
-    categoria: "perfume",
+    categoria: "accesorio",
     precio: 23800,
 },
 {
     id:"6",
     nombre: "Starwalker",
     imagen:"https://http2.mlstatic.com/D_NQ_NP_602421-MLA45464416757_042021-O.webp",
-    categoria: "perfume",
+    categoria: "accesorio",
     precio: 23800,
 
 }
 ]
 
-export const getFetch = () => {
+export const getFetch = (id) => {
     return new Promise ((resolve , reject) =>{
           setTimeout (()=>{
-          resolve (productos)
-        
-        }, 2000)
+            if (id){
+                resolve (productos.find(producto => producto.id === id))
+            }
+            else {
+                resolve (productos)                
+            }        
+        }, 1000)
     })
 }

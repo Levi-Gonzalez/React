@@ -5,16 +5,14 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 
 
 const ItemDetailContainer = () => {
-  const { id } = useParams ()
+  const { detalleId } = useParams ()
 
-
-
-  return (
-    <div className='border border-5 border-primary'>
+    // getFetch (detalleId)  
+    return (
+      <div className='border border-5 border-primary'>
         ItemDetailContainer
-        <ItemDetail/>
-
-    </div>
+        <ItemDetail/> 
+      </div>
   )
 }
 export default ItemDetailContainer
