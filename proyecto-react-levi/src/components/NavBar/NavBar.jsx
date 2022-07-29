@@ -27,8 +27,8 @@ const NavBar = () => {
                       <button className ="btn btn-outline-primary  " type="submit">Search</button>
                     </form> 
                     <Link to='/' className="text-dark m-4"> Home </Link>
-                  <Link to='categoria/perfume' className="text-dark m-4"> Perfumes </Link>
-                  <Link to='categoria/accesorio' className="text-dark m-4"> Accesorios</Link>
+                  <Link to='categoria/Man' className="text-dark m-4"> Man </Link>
+                  <Link to='categoria/Women' className="text-dark m-4"> Women</Link>
                 </ul>
                 </div>
             </div>

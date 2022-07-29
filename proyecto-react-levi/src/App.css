@@ -1,8 +1,7 @@
 
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: auto;
   text-align: center;
 }
 
@@ -33,9 +32,6 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
 
 .read-the-docs {
   color: #888;
@@ -81,17 +77,22 @@ color: rgb(80, 249, 204);
 .filas{
   justify-content: center;
   display: flex;
-
-<<<<<<< HEAD
 }
 .navbar{
   background-color: rgba(2, 23, 72, 0.873);
 }
-.containerCard{
-  margin: 6rem;
-}
+/*  */
 .navIcono{
   color: white;
-=======
->>>>>>> 86cdbfa87ad6ca257ae829ef20d302ff6428b2a2
+}
+
+.containerCard{
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: "row"; */
+  /* flex-wrap: wrap; */
+}
+.perfumes{
+  width: 160px;
 }
