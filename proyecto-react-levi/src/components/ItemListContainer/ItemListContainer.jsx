@@ -3,8 +3,10 @@ import { getFetch } from "../../helpers/getFetch";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 // import ItemCount from "../itemCount/ItemCount"
- 
-  
+
+
+// (ItLisCon) es el que se encarga de toda la funcionabilidad y la lógica de mostrar estados. (vamos a tener UseEffect, estados, apis)
+
   const ItemListContainer = () => {
    // ESTADOS:
    const [productos, setProductos] = useState([])
@@ -12,6 +14,7 @@ import { useParams } from "react-router-dom";
      // ---------------
      const {categoriaId} = useParams()
 
+    // En el useEffect hacemos la llamada a la API.
      useEffect (()=>{
       if (categoriaId) {
          getFetch ()
@@ -35,7 +38,7 @@ import { useParams } from "react-router-dom";
       <div> 
         { loading 
           ? <div className="spinner-border"  role={status}>
-            <span class="sr-only"></span>
+            <span className="sr-only"></span>
             </div>
 
           : <div>

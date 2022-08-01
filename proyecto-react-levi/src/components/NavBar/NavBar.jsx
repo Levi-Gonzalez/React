@@ -12,7 +12,7 @@ const NavBar = () => {
               <span className ="navbar-toggler-icon"></span>
             </button>
               <Link to='/ ' className="text-white">
-                Ecomercce React
+               Ecomercce Levi  Gonzalez
               </Link>
               <Link to='/cart' className="">  <CartWidget />  </Link>
 
@@ -20,11 +20,12 @@ const NavBar = () => {
                 <div className ="offcanvas-header">
                   <button type="button" className ="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                  {/* <h4 className="text-dark">Fragances</h4> */}
               <div className ="offcanvas-body">
                 <ul className ="navbar-nav justify-content-start flex-grow-1 pe-3">
                   <form className ="d-flex" role="search">
                       <input className ="form-control me-2" type="search" placeholder="Search product" aria-label="Search" />
-                      <button className ="btn btn-outline-primary  " type="submit">Search</button>
+                      <button className ="btn btn-outline-dark  " type="submit">Search</button>
                     </form> 
                     <Link to='/' className="text-dark m-4"> Home </Link>
                   <Link to='categoria/Man' className="text-dark m-4"> Man </Link>

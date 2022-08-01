@@ -16,7 +16,7 @@ let productos = [
 },
 {
     id:"3",
-    nombre: "Invictus",
+    nombre: "Invictus Victory",
     imagen:"https://http2.mlstatic.com/D_NQ_NP_902450-MLA47844614443_102021-O.webp",
     categoria: "Man",
     precio: "25.000",
@@ -125,7 +125,7 @@ let productos = [
     id:"18",
     nombre: "Dolce & Gabbana",
     imagen:"https://www.tradeinn.com/f/13856/138567271/dolce---gabbana-the-one-gold-agua-de-perfume-vaporizador-30ml.jpg",
-    categoria: "Man",
+    categoria: "Women",
     precio: "27.000"
 }
 

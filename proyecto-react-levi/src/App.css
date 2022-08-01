@@ -1,4 +1,3 @@
-
 #root {
   max-width: 1280px;
   margin: auto;
@@ -63,7 +62,7 @@ color: rgb(80, 249, 204);
 }
 .carrito img{  
   width: 40px;
-} 
+}
 .botones{
   display: flex;
   justify-content: center;
@@ -90,9 +89,10 @@ color: rgb(80, 249, 204);
   margin: 3rem;
   display: flex;
   justify-content: center;
-  /* flex-direction: "row"; */
-  /* flex-wrap: wrap; */
 }
 .perfumes{
   width: 160px;
+}
+.imagenCard{
+  width: 40px;
 }
