@@ -1,4 +1,5 @@
-import { useState, useEffect} from "react"; // DATO : si tengo doble importación puede generar ruptura, entonces tengo que concatenar/doble importación (useEff y UseState.)
+// DATO : si tengo doble importación puede generar ruptura, entonces tengo que concatenar/doble importación (useEff y UseState.)
+import { useState, useEffect} from "react";  //El UseEff: dispara las acciones o todo lo que tiene adentro.
 import { getFetch } from "../../helpers/getFetch";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
@@ -35,7 +36,7 @@ import { useParams } from "react-router-dom";
       }
       
     return (
-      <div> 
+      <> 
         { loading 
           ? <div className="spinner-border"  role={status}>
             <span className="sr-only"></span>
@@ -46,7 +47,7 @@ import { useParams } from "react-router-dom";
           </div>
         
         }
-      </div>
+      </>
       )
   } 
   

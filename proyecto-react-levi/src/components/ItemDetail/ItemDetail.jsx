@@ -1,28 +1,41 @@
-import React from 'react'
-// import ItemCount from '../ItemCount/ItemCount'
-const ItemDetail = ({producto}) => { //llamamos a a través de prop a "producto"
+import { useState} from 'react'
+import { Link } from 'react-router-dom'
+import ItemCount from '../ItemCount/ItemCount'
 
-    // const onAdd = (cant) => {
-    //     console.log(`La cantidad es:  ${cant}`)
-    // }
+const ItemDetail = ({producto}) => { //llamamos a a través de prop a "producto"
+  const [toCart, setToCart] = useState(true) //
+
+    const onAdd = (cant) => {
+        console.log(`La cantidad es:  ${cant}`)
+        setToCart (false) //tiene que ser false para que setee la vista del componente, entonces cuando deje de ser "true"
+        // pasa a ser "false" para que nos muestra la vista del componente en este caso el carrito
+        //
+    }
 
     return (
-        <div ClassName="detalle-card card mb-4" >
-        <div ClassName="row g-0">
-          <div ClassName="col-md-6">
-            <img width="150 px" ClassName=" rounded-start" alt="..." src= {producto.imagen} />
-          </div>
-          <div ClassName="col-md-8">
-            <div ClassName="card-boy">
+   
+        <div className="row g-0">
+          <div className="col-p-4">
               <h3 >{producto.nombre}</h3>
-              <p ClassName="card-text">{producto.categoria}</p>
+            <img width="150 px" className=" rounded-start" alt="..." src= {producto.imagen} />
+          </div>
+          <div className="">
+            <div className="card-header">
+              <p className="card-text">{producto.categoria}</p>
             </div>
             <div>
                 <h5>${producto.precio}</h5>
-            </div>
+            <div>
+          {toCart?            
+            <ItemCount initial={1} stock={12} onAdd={onAdd}/> 
+            :
+            <Link to={"/cart"}> <button>Ir al carrito</button> </Link>
+            } 
+           </div>
+            </div>                       
           </div>
         </div>
-      </div>
+        //{onAdd} → función
     )
 }
 

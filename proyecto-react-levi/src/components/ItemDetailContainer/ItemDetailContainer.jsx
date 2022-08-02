@@ -3,9 +3,8 @@ import { useParams } from 'react-router-dom'
 import { getFetch } from '../../helpers/getFetch'
 import ItemDetail from '../ItemDetail/ItemDetail'
 
-
 const ItemDetailContainer = () => {
-  // invocamos el array con el producto en singular porque va a ser un producto.
+   // invocamos el array con el producto en singular porque va a ser un producto.
     const [producto, setProducto] =   useState ({})  // iniciamos el "useState" con un objeto
     // para q sea persisente deberiamos llamar ↑ estado "UseSt" guarda los "productos" (en este caso). Empieza vacío y luego se dispara el "UseEff" para cargar el prod haciendo un regrender cargando el prod
   
@@ -20,9 +19,9 @@ const ItemDetailContainer = () => {
     
 
     return (
-      <div className='border border-5 border-primary'>
-          <div className='p-4 m-4 w-'>
-            <ItemDetail producto={producto}/> 
+      <div className='detalle-card'>
+          <div className=' '>
+            <ItemDetail producto={producto}/>             
           </div>
       </div> 
   )
