@@ -16,10 +16,14 @@ function App() {
 
   const [count, setCount] = useState(0)
   return (
-    <BrowserRouter>
+    //BrowsRou: envuelve toda la apliación que nos da el contexto donde voy a poder usar todas las funciones y funcionabilidad del enrutado.
+    //Routes:  Envuelve todos los componentes que van a tener una vista individual
+    //Route: asocia através del "path" asocias a un componente que nos va a mostrar, ej: ("<ItemListCont/>") con determinada ruta
+    //Parametros Dinámicos: son parte de la ruta y se definen despues de los ":" guardando x ej: un "ID" en este caso ":categoriaId" y ":detalleId"
+    <BrowserRouter> 
         <div className="App"> 
           <NavBar />
-           <Routes>
+           <Routes> 
               <Route index  path='/' element = {<ItemListContainer/> } />
               <Route path='/categoria/:categoriaId' element={<ItemListContainer/> } />
               <Route path='/detalle/:detalleId' element={<ItemDetailContainer /> } />

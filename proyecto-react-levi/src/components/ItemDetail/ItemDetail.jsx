@@ -10,7 +10,7 @@ const ItemDetail = ({producto}) => { //llamamos a a través de prop a "producto"
         <div ClassName="detalle-card card mb-4" >
         <div ClassName="row g-0">
           <div ClassName="col-md-6">
-            <img src= {producto.imagen} ClassName="img-fluid rounded-start" alt="..." />
+            <img width="150 px" ClassName=" rounded-start" alt="..." src= {producto.imagen} />
           </div>
           <div ClassName="col-md-8">
             <div ClassName="card-boy">
@@ -18,7 +18,7 @@ const ItemDetail = ({producto}) => { //llamamos a a través de prop a "producto"
               <p ClassName="card-text">{producto.categoria}</p>
             </div>
             <div>
-                <h5>{producto.precio}</h5>
+                <h5>${producto.precio}</h5>
             </div>
           </div>
         </div>
