@@ -3,12 +3,12 @@ import { useState, useEffect} from "react";  //El UseEff: dispara las acciones o
 import { getFetch } from "../../helpers/getFetch";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-// import ItemCount from "../itemCount/ItemCount"
 
 
 // (ItLisCon) es el que se encarga de toda la funcionabilidad y la lógica de mostrar estados. (vamos a tener UseEffect, estados, apis)
 
-  const ItemListContainer = () => {
+  const ItemListContainer = () => { //ItListC: es un componente a su vez llama a su padre que es "app" (tiene que coincidir con su ruta) 
+    //SI coincide la ruta se dispara la función de mi componente
    // ESTADOS:
    const [productos, setProductos] = useState([])
    const [loading, setLoading] = useState (true)

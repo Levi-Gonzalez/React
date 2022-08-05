@@ -28,7 +28,7 @@ const Item = ({ prod }) => {
                             <div className="card-footer p-3"> 
                                     <Link to = {`/detalle/${prod.id}`} > 
                                         <button className="btn btn-outline-dark btn-block">
-                                            Detalle del producto
+                                            Product detail
                                         </button>                             
                                     </Link>          
                             </div>      
