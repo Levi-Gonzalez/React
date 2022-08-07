@@ -1,10 +1,11 @@
-import React from 'react'
+import { memo } from 'react'
 import {Link} from 'react-router-dom'
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 
 export
-const Item = ({ prod }) => {
+const Item = memo (({ prod }) => {
+    
     return (
 
             <div className='containerCard col-md-3'>
@@ -34,7 +35,8 @@ const Item = ({ prod }) => {
                             </div>      
                         </div>                                                                                                                            
             </div> 
+        )
+    }
+)
 
-    )
-}
 

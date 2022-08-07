@@ -1,13 +1,14 @@
 // DATO : si tengo doble importación puede generar ruptura, entonces tengo que concatenar/doble importación (useEff y UseState.)
 import { useState, useEffect} from "react";  //El UseEff: dispara las acciones o todo lo que tiene adentro.
-import { getFetch } from "../../helpers/getFetch";
-import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { getFetch } from "../../helpers/getFetch";
+import ItemCount from "../ItemCount/ItemCount";
+import { ItemList } from "../ItemList/ItemList";
 
 
 // (ItLisCon) es el que se encarga de toda la funcionabilidad y la lógica de mostrar estados. (vamos a tener UseEffect, estados, apis)
 
-  const ItemListContainer = () => { //ItListC: es un componente a su vez llama a su padre que es "app" (tiene que coincidir con su ruta) 
+  const ItemListContainer = ({saludo}) => { //ItListC: es un componente a su vez llama a su padre que es "app" (tiene que coincidir con su ruta) 
     //SI coincide la ruta se dispara la función de mi componente
    // ESTADOS:
    const [productos, setProductos] = useState([])
@@ -36,7 +37,7 @@ import { useParams } from "react-router-dom";
       }
       
     return (
-      <> 
+      <div> 
         { loading 
           ? <div className="spinner-border"  role={status}>
             <span className="sr-only"></span>
@@ -47,7 +48,7 @@ import { useParams } from "react-router-dom";
           </div>
         
         }
-      </>
+      </div>
       )
   } 
   

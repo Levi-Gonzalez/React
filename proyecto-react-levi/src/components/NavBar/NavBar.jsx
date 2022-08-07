@@ -1,6 +1,5 @@
 import CartWidget from "../CartWidget/CartWidget"
-import {Link} from 'react-router-dom'
-import { Navbar } from "react-bootstrap"
+import {Link} from 'react-router-dom' 
 //Link: botón que permite navegar entre rutas pintando en la URL y el componente "app" escucha 
 // esuchando la ruta devolviendo el componente en este caso categoria.
 const NavBar = () => {

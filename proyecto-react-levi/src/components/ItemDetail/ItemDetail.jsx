@@ -1,9 +1,11 @@
 import { useState} from 'react'
 import { Link } from 'react-router-dom'
 import ItemCount from '../ItemCount/ItemCount'
+import { useCartContext } from '../Context/cartContext'
 
 const ItemDetail = ({producto}) => { //llamamos a a través de prop a "producto"
   const [toCart, setToCart] = useState(true) //
+  //const {agregarCarrito} = //useCartContext ()
 
     const onAdd = (cant) => {
         console.log(`La cantidad es:  ${cant}`)
@@ -12,30 +14,34 @@ const ItemDetail = ({producto}) => { //llamamos a a través de prop a "producto"
         // 
     }
 
-    
-    
     return (
    
         <div className="row g-0 ">
           <div className="col-p-4 mt-5">
-              <h3 >{producto.nombre}</h3>
+            <h3 >{producto.nombre}</h3>
             <img width="150 px" className=" rounded-start" alt="..." src= {producto.imagen} />
           </div>
+         
           <div className="">
             <div className="card-header">
               <p className="card-text">{producto.categoria}</p>
             </div>
+          </div>                       
+         
+          <>
+            <h5>${producto.precio}</h5>
             <div>
-                <h5>${producto.precio}</h5>
-            <div>
-          {toCart?            
-            <ItemCount initial={1} stock={12} onAdd={onAdd}/> 
-            :
-            <Link to={"/cart"}> <button>Go to cart</button> </Link>
-            } 
-           </div>
-            </div>                       
-          </div>
+              {toCart ?            
+                  <ItemCount initial={1} stock={12} onAdd={onAdd}/> 
+                  
+                 :<>
+                    <Link to={"/cart"}> <button  className='btn btn-danger'>Terminar compra</button> </Link>  
+                    <Link to={"/"}> <button className='btn btn-warning' > Seguir comprando  </button> </Link>
+                 </>
+              } 
+            </div>
+          </>
+
         </div>
         //{onAdd} → función
     )

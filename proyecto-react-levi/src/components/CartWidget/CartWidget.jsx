@@ -1,4 +1,4 @@
-import logo from '../../assets/logo-carrito/carrito.png'
+
 function CartWidget() {
   return (
     <div className='carrito'>

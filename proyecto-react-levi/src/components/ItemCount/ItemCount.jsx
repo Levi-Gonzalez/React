@@ -32,11 +32,12 @@ const ItemCount = ({initial=1, stock =10, onAdd}) => {
      
         <label> {count} </label>
         <br />
-        <button className='btn btn-success'onClick={handleAdd}>+</button>
+        <button className='btn btn-success'onClick={handleAdd}> + </button>
         <br />
-        <button className='btn btn-danger' onClick={handleRemove}>-</button>
+        <button className='btn btn-danger' onClick={handleRemove}> - </button>
         <br />
-        <button className=' btn btn-primary'onClick={()=> onAdd(count)}>Add to cart</button>
+        <button className=' btn btn-primary'onClick={handleAddToCart}> Add to cart </button>
+      
     </div>
   )
 }
