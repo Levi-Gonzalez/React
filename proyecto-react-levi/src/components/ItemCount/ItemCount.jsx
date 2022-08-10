@@ -20,10 +20,7 @@ const ItemCount = ({initial=1, stock =10, onAdd}) => {
     }
   }
    const handleAddToCart = () => {
-
-   if (count < stock){
         onAdd (count)
-   }
   }
 
   

@@ -7,7 +7,6 @@ import Cart from './components/Cart/Cart';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartContextProvider from './components/Context/CartContext';
-
 function App() {
 
   return (
@@ -16,7 +15,7 @@ function App() {
     //Route: asocia através del "path" asocias a un componente que nos va a mostrar, ej: ("<ItemListCont/>") con determinada ruta
     //Parametros Dinámicos: son parte de la ruta y se definen despues de los ":" guardando x ej: un "ID" en este caso ":categoriaId" y ":detalleId"
 <BrowserRouter> 
-  {/* <CartContextProvider> */}
+    <CartContextProvider>
         <div className="App"> 
           <NavBar />
            <Routes> 
@@ -27,18 +26,13 @@ function App() {
               <Route path='/cart'element ={<Cart/>} />
            </Routes> 
        </div>
-  {/* </CartContextProvider> */}
+
+    </CartContextProvider>
+
 </BrowserRouter>
       
       
-      // <div>
-      //   <a href="https://vitejs.dev" target="_blank">
-      //     * <img src="/vite.svg" className="logo" alt="Vite logo" /> */
-      //   </a>
-      //   <a href="https://reactjs.org" target="_blank">
-      //     <img src={reactLogo} className="logo react" alt="React logo" />
-      //   </a>
-      // </div>
+
 
   )
 }

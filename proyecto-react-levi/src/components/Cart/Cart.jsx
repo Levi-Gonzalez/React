@@ -1,4 +1,4 @@
-import {useCartContext} from "../Context/cartContext"
+import {useCartContext} from "../Context/CartContext"
 
 const Cart = () => {
   
@@ -8,14 +8,12 @@ const Cart = () => {
     <div>     
       <h1>carrito</h1>
     <ul>
-      {cartList?.map(item =>(
-        <div key={item.id}>
-            <div>
-                <img src={item.imagen} alt="imagen producto" className='w-50'/>
-                nombre: {item.nombre},
-                Cantidad: {item.cantidad} {item.precio},
-                Precio: {item.cantidad * item.precio}
-            </div>
+      {cartList?.map(prod =>( //mostramos el array recorriendolo con el map
+        <div key={prod.id}>
+              <div>
+                  <img src={prod.imagen} alt="imagen prod" className='w-25'/>
+                   Nombre: {prod.nombre} -  Cantidad: {prod.cantidad} {prod.precio}  -  Precio: {prod.cantidad * prod.precio}
+              </div>
             <button className='btn btn-warning'> X </button>
         </div>
       ))}

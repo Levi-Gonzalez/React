@@ -2,7 +2,6 @@
 import { useState, useEffect} from "react";  //El UseEff: dispara las acciones o todo lo que tiene adentro.
 import { useParams } from "react-router-dom";
 import { getFetch } from "../../helpers/getFetch";
-import ItemCount from "../ItemCount/ItemCount";
 import { ItemList } from "../ItemList/ItemList";
 
 
@@ -11,7 +10,7 @@ import { ItemList } from "../ItemList/ItemList";
   const ItemListContainer = ({saludo}) => { //ItListC: es un componente a su vez llama a su padre que es "app" (tiene que coincidir con su ruta) 
     //SI coincide la ruta se dispara la función de mi componente
    // ESTADOS:
-   const [productos, setProductos] = useState([])
+   const [productos, setProductos] = useState({})
    const [loading, setLoading] = useState (true)
      // ---------------
      const {categoriaId} = useParams()
@@ -32,9 +31,9 @@ import { ItemList } from "../ItemList/ItemList";
       }
       },[categoriaId])
       
-      const onAdd = (cantidad) => {
-        console.log(`La cantidad es : ${cantidad}`);
-      }
+      // const onAdd = (cantidad) => {
+      //   console.log(`La cantidad es : ${cantidad}`);
+      // }
       
     return (
       <div> 
