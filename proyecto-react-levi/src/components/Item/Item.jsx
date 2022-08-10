@@ -8,9 +8,9 @@ const Item = memo (({ prod }) => {
     
     return (
 
-            <div className='containerCard col-md-3'>
+            <div className='containerCard col-xl-3 '>
                             {/* // key={prod.id}                                                            */}
-                        <div className="card w-75 mt-3 p-2" >
+                        <div className="card w-75 mt-4 p-2" >
                             <div className="card-header text-success fw-light">
                                 {`${prod.nombre}`}
                             </div>
@@ -28,8 +28,8 @@ const Item = memo (({ prod }) => {
                         
                             <div className="card-footer p-3"> 
                                     <Link to = {`/detalle/${prod.id}`} > 
-                                        <button className="btn btn-outline-dark btn-block">
-                                            Product detail
+                                        <button className="btnBuy btn btn-outline-dark btn-block">
+                                            Buy
                                         </button>                             
                                     </Link>          
                             </div>      

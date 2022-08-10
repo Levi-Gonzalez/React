@@ -1,4 +1,6 @@
 export
+//esto es un mook, una simulación que nosotros nos conectamos algunos datos, que están hardcodeados/rígido. NO es dínamico
+//Para que sea dínamico usar un lenguaje como NODE, Phyton, Django etc. Y construír nuestras APIS (del lado del back) de producto.
 let productos = [
 {
     id:"1",
@@ -116,7 +118,7 @@ let productos = [
 },
 {
     id:"17",
-    nombre: "Le Male Le",
+    nombre: "Jean Paul",
     imagen:"https://http2.mlstatic.com/D_NQ_NP_685366-MLA47602420663_092021-O.webp",
     categoria: "Man",
     precio: "27.000"
@@ -140,6 +142,6 @@ export const getFetch = (id) => {
             else {
                 resolve (productos)                
             }        
-        }, 1000)
+        }, 3000)
     })
 }

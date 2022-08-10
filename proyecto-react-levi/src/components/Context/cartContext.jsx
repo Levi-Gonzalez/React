@@ -9,7 +9,7 @@ import {createContext, useContext, useState } from "react"; //fijarse que import
 
     const CartContextProvider = ({children}) => {
         //acá podemos declarar todos los estados y las funciones globales 
-        const [cartList , setCartList] = useState ([]) //Acá se guardara el listado de mi
+        const [cartList , setCartList] = useState ([]) // cartList es un estado y acá se guardara el listado de mi carrito
         
             const agregarCarrito = (prod) => {
             const idx = cartList.findIndex(producto => producto.id === prod.id)
@@ -21,17 +21,17 @@ import {createContext, useContext, useState } from "react"; //fijarse que import
                         setCartList ( [...cartList] ) //Copia todo el contenido y lo pega en un nuevo array
                     }
                     else{
-
-                    setCartList([ //Creamos un nuevo array y para que mantenga al anterior "producto" con el S. operator. copiamos el interior de la variable: 
-                                    //const [cartList , setCartList]  (en este caso) y lo pasamos al SetC. y agregamos el "prod" nuevo para que vaya sumando y no se superpongan.
-                        ...cartList, 
+                                    //CartContextProv le pasa un Reeg Render a setCartList y seteamos un nuevo estado
+                    setCartList([     //dispara un seteo. Al ejecutar un estado se renderiza el contextProvider, al renderizar se actualiza el estado que yo tengo ENTONCES : 👀
+                        ...cartList, //Creamos un nuevo array y para que mantenga al anterior "producto" con el S. operator. copiamos el interior de la variable: 
+                                //const [cartList , setCartList]  (en este caso) y lo pasamos al SetC. y agregamos el "prod" nuevo para que vaya sumando y no se superpongan.
                             prod
                     ])
             } 
         }
 
         const vaciarCarrito = () => {
-            setCartList ([])
+            setCartList ([])   // creamos un array vacío para limpiar el carrito
         }
 
         const precioTotal = () => {
@@ -45,12 +45,12 @@ import {createContext, useContext, useState } from "react"; //fijarse que import
         }
         return (
             <CartContext.Provider value={{
-                cartList,
+                cartList, //👀 este siempre nos da el  actualizado en tiempo real
                 agregarCarrito,
-                vaciarCarrito,
+                vaciarCarrito, 
                 precioTotal,
                 cantidadTotal,
-                borrarProducto
+                borrarProducto,
             }}>
                 {children}
 

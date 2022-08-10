@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
 
-
 const ItemCount = ({initial=1, stock =10, onAdd}) => {
   const [count, setCount] = useState (1) ;
    
@@ -25,15 +24,15 @@ const ItemCount = ({initial=1, stock =10, onAdd}) => {
 
   
   return (
-    <div className='botones card'>
+    <div className=''>
      
         <label> {count} </label>
         <br />
-        <button className='btn btn-success'onClick={handleAdd}> + </button>
+        <button className='botonCart btn btn-success'onClick={handleAdd}> + </button>
         <br />
-        <button className='btn btn-danger' onClick={handleRemove}> - </button>
+        <button className='botonCart btn btn-danger' onClick={handleRemove}> - </button>
         <br />
-        <button className=' btn btn-primary'onClick={handleAddToCart}> Add to cart </button>
+        <button className='botonCart btn btn-primary'onClick={handleAddToCart}> Add To Cart </button>
       
     </div>
   )

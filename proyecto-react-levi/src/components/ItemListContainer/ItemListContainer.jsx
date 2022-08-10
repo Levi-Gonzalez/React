@@ -31,16 +31,19 @@ import { ItemList } from "../ItemList/ItemList";
       }
       },[categoriaId])
       
-      // const onAdd = (cantidad) => {
-      //   console.log(`La cantidad es : ${cantidad}`);
-      // }
       
     return (
       <div> 
         { loading 
-          ? <div className="spinner-border"  role={status}>
-            <span className="sr-only"></span>
-            </div>
+          ?
+          <div className="loader">
+          <div className="face">
+              <div className="circle"></div>
+          </div>
+          <div className="face">
+              <div className="circle"></div>
+          </div>
+          </div>
 
           : <div>
             <ItemList productos={productos} /> 
