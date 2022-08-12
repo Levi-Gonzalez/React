@@ -60,10 +60,15 @@ color: rgb(80, 249, 204);
 .logoReact{
   width: 30px;
 }
-.carrito img{  
-  width: 40px;
+.cartImage{  
+  width: 3.5rem;
+
 }
-.botones{
+.imageCart{
+  width: 40px;
+  padding: 2px;
+}
+.buttonCart{
   display: flex;
   justify-content: center;
 }
@@ -84,7 +89,10 @@ color: rgb(80, 249, 204);
 .navIcono{
   color: white;
 }
-
+.fragance{
+  font-family:'Times New Roman', Times, serif;
+  color: navy;
+}
 .containerCard{
   margin: 3rem;
   display: flex;
@@ -164,14 +172,14 @@ color: rgb(80, 249, 204);
     transform: rotate(1turn);
   }
 }
-.botonCart {
+.buttonCart {
   width: 12rem;
   margin: 7px;
 }
 .btnBuy{
   width: 7rem;
 }
-.navegador{
+.navegate {
   margin: 6rem;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

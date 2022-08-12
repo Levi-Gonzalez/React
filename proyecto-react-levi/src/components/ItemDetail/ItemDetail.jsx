@@ -5,15 +5,15 @@ import { useState } from 'react'
 // import { useCartContext } from '../Context/CartContext'  //Cada vez que querramos usar CONTEXT, tenemos que importar "useContext" y el "CartContext"
                                       // nos evitamos al invocar la funcion en CartContext, entonces lo que hacemos es llamar a esa función: ✔
 
-const ItemDetail = ({producto}) => { //llamamos a a través de prop a "producto"
+const ItemDetail = ({product}) => { //llamamos a a través de prop a "product"
     
     const [isCount, setIsCount] = useState(true)
-    const { agregarCarrito } = useCartContext () //acá la llamamos ✔ y hacemos destructuring de "agregarCarrito" (función que creamos dentro del Provider)
+    const { addCart } = useCartContext () //acá la llamamos ✔ y hacemos destructuring de "addCart" (función que creamos dentro del Provider)
     
-      const onAdd = (cant) => {
+      const onAdd = (amoun) => {
         
-        agregarCarrito ({...producto, cantidad: cant}) //para que este todo dentro de un mismo campo aplicamos el S.op para que este todo en un mismo campo,
-                                                      // lo va a pegar en mi objeto nuevo y cantidad pasa a ser un campo más ya no van a estar separados en 2 campos
+        addCart ({...product, amount: amoun}) //para que este todo dentro de un mismo campo aplicamos el S.op para que este todo en un mismo campo,
+                                                      // lo va a pegar en mi objeto nuevo y amount pasa a ser un campo más ya no van a estar separados en 2 campos
         setIsCount (false)       //tiene que ser false para que setee la vista del componente, entonces cuando deje de ser "true"
                                   // pasa a ser "false" para que nos muestra la vista del componente en este caso el carrito
       }
@@ -23,25 +23,25 @@ const ItemDetail = ({producto}) => { //llamamos a a través de prop a "producto"
    
       <div className="row g-0 ">
           <div className="col-p-4 mt-5">
-            <h3 >{producto.nombre}</h3>
-            <img width="150 px" className=" rounded-start" alt="..." src= {producto.imagen} />
+            <h3 >{product.name}</h3>
+            <img width="150 px" className=" rounded-start" alt="..." src= {product.image} />
       </div>
 
          
       <div className="">
             <div className="card-header">
-              <p className="card-text">{producto.categoria}</p>
+              <p className="card-text">{product.category}</p>
             </div>
       </div>                 
     
-      <h5>${producto.precio}</h5>
+      <h5>${product.price}</h5>
             <div>
                {isCount ?            
                   <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
                  :
                  <>
-                    <Link to={"/cart"}> <button  className='botonCart btn btn-danger'>Check Out</button> </Link>  
-                    <Link to={"/"}> <button className='botonCart btn btn-warning' > Continue Buying  </button> </Link>
+                    <Link to={"/cart"}> <button  className='buttonCart btn btn-danger'>Check Out</button> </Link>  
+                    <Link to={"/"}> <button className='buttonCart btn btn-warning' > Continue Buying  </button> </Link>
                     {/* {onAdd} */}
                  </>
               } 

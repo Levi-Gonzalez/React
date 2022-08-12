@@ -1,6 +1,5 @@
 import { memo } from 'react'
 import {Link} from 'react-router-dom'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 
 export
@@ -12,22 +11,22 @@ const Item = memo (({ prod }) => {
                             {/* // key={prod.id}                                                            */}
                         <div className="card w-75 mt-4 p-2" >
                             <div className="card-header text-success fw-light">
-                                {`${prod.nombre}`}
+                                {`${prod.name}`}
                             </div>
                             
                             <div className="card-body">
-                                <img src={prod.imagen} alt='' className='perfumes ' />                                                 
+                                <img src={prod.image} alt='' className='perfumes ' />                                                 
                             </div>  
                                 
                             <div className='card-footer text-success'>
                             <div className='fs-5 text'>
-                            {`$${prod.precio}`}          
+                            {`$${prod.price}`}          
                             </div>           
-                                {`${prod.categoria}`}
+                                {`${prod.category}`}
                             </div>
                         
                             <div className="card-footer p-3"> 
-                                    <Link to = {`/detalle/${prod.id}`} > 
+                                    <Link to = {`/detail/${prod.id}`} > 
                                         <button className="btnBuy btn btn-outline-dark btn-block">
                                             Buy
                                         </button>                             

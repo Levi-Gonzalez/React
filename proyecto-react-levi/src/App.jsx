@@ -16,16 +16,16 @@ function App() {
     //CartContextProv: Hace que podamos declarar todos los estados y funciones globales. 
     //Routes:  Envuelve todos los componentes que van a tener una vista individual
     //Route: asocia através del "path" asocias a un componente que nos va a mostrar, ej: ("<ItemListCont/>") con determinada ruta
-    //Parametros Dinámicos: son parte de la ruta y se definen despues de los ":" guardando x ej: un "ID" en este caso ":categoriaId" y ":detalleId"
+    //Parametros Dinámicos: son parte de la ruta y se definen despues de los ":" guardando x ej: un "ID" en este caso ":categoryId" y ":detalleId"
 <BrowserRouter> 
     <CartContextProvider> 
         <div className="App"> 
           <NavBar />
            <Routes> 
               <Route index  path='/' element = {<ItemListContainer/> } />
-              <Route path='/categoria/:categoriaId' element={<ItemListContainer/> } />
+              <Route path='/category/:categoryId' element={<ItemListContainer/> } />
               <Route path='*' element = {<Navigate to='/' /> } />
-              <Route path='/detalle/:detalleId' element={<ItemDetailContainer /> } />
+              <Route path='/detail/:detailId' element={<ItemDetailContainer /> } />
               <Route path='/cart'element ={<Cart/>} />
            </Routes> 
        </div>

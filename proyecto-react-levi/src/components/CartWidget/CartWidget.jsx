@@ -1,8 +1,8 @@
 
 function CartWidget() {
   return (
-    <div className='carrito'>
-      <img className='imagenCarrito' src="./src/assets/logo-carrito/carrito.png" alt="carrito" />
+    <div className='cartImage'>
+      <img className='imageCart' src="./src/assets/logo-cart/cart3.png" alt="Cart" />
     </div>
   )
 }

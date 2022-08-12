@@ -11,13 +11,13 @@ import {createContext, useContext, useState } from "react"; //fijarse que import
         //acá podemos declarar todos los estados y las funciones globales 
         const [cartList , setCartList] = useState ([]) // cartList es un estado y acá se guardara el listado de mi carrito
         
-            const agregarCarrito = (prod) => {
-            const idx = cartList.findIndex(producto => producto.id === prod.id)
+            const addCart = (prod) => {
+            const idx = cartList.findIndex(product => product.id === prod.id)
                     if  (idx !== -1) {
-                      //cartList[idx].cantidad += prod.cantidad //resumen de una línea de 16 y 17  
+                      //cartList[idx].amount += prod.amount //resumen de una línea de 16 y 17  
                
-                       let cant = cartList [idx].cantidad
-                        cartList[idx].cantidad = cant + prod.cantidad
+                       let amoun = cartList [idx].amount
+                        cartList[idx].amount = amoun + prod.amount
                         setCartList ( [...cartList] ) //Copia todo el contenido y lo pega en un nuevo array
                     }
                     else{
@@ -30,27 +30,27 @@ import {createContext, useContext, useState } from "react"; //fijarse que import
             } 
         }
 
-        const vaciarCarrito = () => {
+        const emptyCart = () => {
             setCartList ([])   // creamos un array vacío para limpiar el carrito
         }
 
-        const precioTotal = () => {
-            return cartList.reduce( (acumPrecio, prodObj) => acumPrecio = acumPrecio + (prodObj.precio * prodObj.cantidad) , 0 )
+        const priceTotal = () => {
+            return cartList.reduce( (acumprice, prodObj) => acumprice = acumprice + (prodObj.price * prodObj.amount) , 0 )
         }
-        const cantidadTotal = () => {
-            return cartList.reduce ((contador, produObject)=> contador += produObject.cantidad , 0 )
+        const amountTotal = () => {
+            return cartList.reduce ((count, produObject)=> count += produObject.amount , 0 )
         }
-        const borrarProducto = (id) =>{
+        const deleteProduct = (id) =>{
             setCartList( cartList.filter (prod => prod.id !== id) )
         }
         return (
             <CartContext.Provider value={{
                 cartList, //👀 este siempre nos da el  actualizado en tiempo real
-                agregarCarrito,
-                vaciarCarrito, 
-                precioTotal,
-                cantidadTotal,
-                borrarProducto,
+                addCart,
+                emptyCart, 
+                priceTotal,
+                amountTotal,
+                deleteProduct,
             }}>
                 {children}
 
