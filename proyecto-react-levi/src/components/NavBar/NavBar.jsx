@@ -22,17 +22,19 @@ const NavBar = () => {
                 <div className ="offcanvas-header">
                   <button type="button" className ="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+
                   <h2 className="fragance">Fragances</h2>
+
               <div className ="offcanvas-body">
-                <ul className ="navbar-nav justify-content-start flex-grow-1 pe-3">
-                    
+                <ul className ="navbar-nav justify-content-start flex-grow-1 pe-3">                    
                     <div className="navegate">
                     <Link to='/' className="text-dark m-4"> <h4 className="home">Home</h4>  </Link>
-                  <Link to='category/Man' className="text-dark m-4"> <h4 className="man">Man</h4> </Link>
-                  <Link to='category/Women' className="text-dark m-4"> <h4 className="women">Women</h4></Link>
+                    <Link to='category/Man' className="text-dark m-4"> <h4 className="man">Man</h4> </Link>
+                    <Link to='category/Women' className="text-dark m-4"> <h4 className="women">Women</h4></Link>
                     </div>
                 </ul>
-                </div>
+              </div>
+              
             </div>
         </div>
       </nav>

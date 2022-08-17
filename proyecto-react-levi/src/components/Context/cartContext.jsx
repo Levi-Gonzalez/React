@@ -27,7 +27,8 @@ import {createContext, useContext, useState } from "react"; //fijarse que import
                                 //const [cartList , setCartList]  (en este caso) y lo pasamos al SetC. y agregamos el "prod" nuevo para que vaya sumando y no se superpongan.
                             prod
                     ])
-            } 
+                    
+            }       
         }
 
         const emptyCart = () => {
