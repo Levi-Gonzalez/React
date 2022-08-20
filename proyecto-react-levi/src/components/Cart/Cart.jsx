@@ -2,7 +2,7 @@ import {useCartContext} from "../Context/CartContext"
 
 const Cart = () => {
   
-  const {cartList, emptyCart, deleteCart, totalprice} = useCartContext ()
+  const {cartList, emptyCart, deleteCart, priceTotal} = useCartContext ()
 
   return (
     <div>     
@@ -27,7 +27,11 @@ const Cart = () => {
                </div>
         ))}
        </ul>
-        <button onClick={emptyCart}>Delete Cart </button>
+       <h6>{priceTotal () !== 0 && `Total Price: $${priceTotal ()}`}</h6>
+       <div>
+        <button className="m-3" onClick={emptyCart}>Delete Cart </button>
+       </div>
+
     </div>
 
     )
