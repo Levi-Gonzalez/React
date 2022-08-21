@@ -19,12 +19,13 @@ import { ItemList } from "../ItemList/ItemList";
       useEffect (() =>{
         const fireStore = getFirestore ()
         const queryCollection = collection (fireStore, "productos")
-        const queryFiltrada = query( queryCollection, where( 'price', '>=', 10000))
+        const queryFiltrada = categoryId ? query( queryCollection, where( 'category', '==', categoryId)) :
+        query(queryCollection)
         getDocs (queryFiltrada)
         .then(resp => setProducts (resp.docs.map(prod => ({id: prod.id, ...prod.data () }) ) ) )
         .catch (err => console.log(err)) 
         .finally(() => setLoading (false))
-      }, [] )
+      }, [categoryId] )
 
       console.log(products);
       
