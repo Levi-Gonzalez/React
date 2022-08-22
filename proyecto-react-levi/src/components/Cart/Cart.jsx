@@ -1,10 +1,38 @@
+import { addDoc, collection, getFirestore } from "firebase/firestore"
 import {useCartContext} from "../Context/CartContext"
 
 const Cart = () => {
   
   const {cartList, emptyCart, deleteCart, priceTotal} = useCartContext ()
 
+  // Orden de compra:
+const saveOrder = async (e) => {
+  e.preventDefault ()
+
+  const order = {}
+   order.buy = { email: 'example@gmail.com',
+                 name:'usuario',
+                 phone:'123456789'}
+
+
+  order.productos = cartList.map(prod => {
+    return {
+      product: prod.name,
+      id: prod.id,
+      price: prod.price
+    }
+  })
+  order.total = priceTotal ()
+  console.log(order);
+  
+  
+  const fireStore = getFirestore ()
+  const queryOrders = collection (fireStore, 'orders')
+  addDoc (queryOrders, order)
+  .then (resp => setId(resp.id))
+
   return (
+
     <div>     
 
        <ul>
@@ -32,10 +60,15 @@ const Cart = () => {
         <button className="m-3" onClick={emptyCart}>Delete Cart </button>
        </div>
 
+       <div>
+        <button onSubmit={saveOrder} >Shopping Generator</button>
+       </div>
+
     </div>
 
     )
   }
+}
 
 
 export default Cart
