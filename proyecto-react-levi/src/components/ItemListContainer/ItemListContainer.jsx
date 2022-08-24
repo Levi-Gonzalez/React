@@ -27,7 +27,7 @@ import { ItemList } from "../ItemList/ItemList";
         .finally(() => setLoading (false))
       }, [categoryId] )
 
-      console.log(products);
+
       
     // En el useEffect hacemos la llamada a la API.
 
@@ -54,5 +54,5 @@ import { ItemList } from "../ItemList/ItemList";
       )
     }
     
-
+ 
 export default ItemListContainer

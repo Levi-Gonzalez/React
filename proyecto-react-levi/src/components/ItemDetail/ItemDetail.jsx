@@ -42,7 +42,7 @@ const ItemDetail = ({product}) => { //llamamos a a través de prop a "product"
                  <>
                     <Link to={"/cart"}> <button  className='buttonCart btn btn-danger'>Check Out</button> </Link>  
                     <Link to={"/"}> <button className='buttonCart btn btn-warning' > Continue Buying  </button> </Link>
-                    {/* {onAdd} */}
+
                  </>
               } 
          </div>
