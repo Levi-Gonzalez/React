@@ -1,30 +1,26 @@
-import {createContext, useContext, useState } from "react"; //fijarse que importe todo en una sola línea para que no genere error al subir a un host
+import {createContext, useContext, useState } from "react"; 
 
     const CartContext = createContext ([])
 
-    export const useCartContext = () => useContext (CartContext) //Esta funcion la creamos para que devuelva el "useContext" 
-    //Lo que hace es que invocar a CartContext así podemos pasarlo ya "invocado" como esta acá. Nos devuelve una función ejecutada (CartContext)
-    //en vez de hacer 2 importaciones como en "itemDeteail" hacemos 1 línea
-    //NO OLVIDAR, EXPORTAR!!
-
+    export const useCartContext = () => useContext (CartContext) 
     const CartContextProvider = ({children}) => {
-        //acá podemos declarar todos los estados y las funciones globales 
-        const [cartList , setCartList] = useState ([]) // cartList es un estado y acá se guardara el listado de mi carrito
+        
+        const [cartList , setCartList] = useState ([]) 
         
             const addCart = (prod) => {
             const idx = cartList.findIndex(product => product.id === prod.id)
                     if  (idx !== -1) {
-                      //cartList[idx].amount += prod.amount //resumen de una línea de 16 y 17  
+                      
                
                        let amoun = cartList [idx].amount
                         cartList[idx].amount = amoun + prod.amount
-                        setCartList ( [...cartList] ) //Copia todo el contenido y lo pega en un nuevo array
+                        setCartList ( [...cartList] )
                     }
                     else{
-                                    //CartContextProv le pasa un Reeg Render a setCartList y seteamos un nuevo estado
-                    setCartList([     //dispara un seteo. Al ejecutar un estado se renderiza el contextProvider, al renderizar se actualiza el estado que yo tengo ENTONCES : 👀
-                        ...cartList, //Creamos un nuevo array y para que mantenga al anterior "producto" con el S. operator. copiamos el interior de la variable: 
-                                //const [cartList , setCartList]  (en este caso) y lo pasamos al SetC. y agregamos el "prod" nuevo para que vaya sumando y no se superpongan.
+                                
+                    setCartList([     
+                        ...cartList, 
+
                             prod
                     ])
                     

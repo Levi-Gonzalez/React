@@ -1,14 +1,13 @@
 import { memo } from 'react'
 import {Link} from 'react-router-dom'
 
-
 export
 const Item = memo (({ prod }) => {
     
     return (
 
             <div className='containerCard col-xl-3 '>
-                            {/* // key={prod.id}                                                            */}
+                                                                                  
                         <div className="card w-75 mt-4 p-2" >
                             <div className="card-header text-success fw-light">
                                 {`${prod.name}`}

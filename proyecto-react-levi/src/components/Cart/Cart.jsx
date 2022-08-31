@@ -3,8 +3,6 @@ import { useState } from "react"
 import {useCartContext} from "../Context/CartContext"
 
 const Cart = () => {
-  
-      // Estados:
       const [id, setId] = useState ('')
       const [formApp, setFormApp] = useState ({
                 email: '',
@@ -17,7 +15,6 @@ const Cart = () => {
       const saveOrder = (e) => {
         e.preventDefault ()
       
-       // Orden de compra:
         const order = {}
         order.buyer = formApp
       
@@ -30,12 +27,10 @@ const Cart = () => {
         })
         order.total = priceTotal ()  
         
-        // guardar en la base de datos de Fire store:
         const fireStore = getFirestore ()
           const queryOrders = collection (fireStore, 'orders')
           addDoc (queryOrders, order)
           .then (resp => setId(resp.id))
-          .catch (err => console.log(err))
           .finally (()=> setFormApp ({
                                     email:'',
                                     name:'',
@@ -49,7 +44,7 @@ const Cart = () => {
 
       <div>     
         <ul>
-            {cartList?.map(prod =>( //mostramos el array recorriendolo con el map
+            {cartList?.map(prod =>( 
                 <div key={prod.id}>
                             <div>
                               <img src={prod.image} alt="image prod" className='w-25'/> 

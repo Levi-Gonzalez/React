@@ -2,20 +2,16 @@ import ItemCount from '../ItemCount/ItemCount'
 import { useCartContext} from '../Context/CartContext'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-// import { useCartContext } from '../Context/CartContext'  //Cada vez que querramos usar CONTEXT, tenemos que importar "useContext" y el "CartContext"
-                                      // nos evitamos al invocar la funcion en CartContext, entonces lo que hacemos es llamar a esa función: ✔
 
-const ItemDetail = ({product}) => { //llamamos a a través de prop a "product"
+const ItemDetail = ({product}) => { 
     
     const [isCount, setIsCount] = useState(true)
-    const { addCart } = useCartContext () //acá la llamamos ✔ y hacemos destructuring de "addCart" (función que creamos dentro del Provider)
+    const { addCart } = useCartContext () 
     
       const onAdd = (amoun) => {
         
-        addCart ({...product, amount: amoun}) //para que este todo dentro de un mismo campo aplicamos el S.op para que este todo en un mismo campo,
-                                                      // lo va a pegar en mi objeto nuevo y amount pasa a ser un campo más ya no van a estar separados en 2 campos
-        setIsCount (false)       //tiene que ser false para que setee la vista del componente, entonces cuando deje de ser "true"
-                                  // pasa a ser "false" para que nos muestra la vista del componente en este caso el carrito
+        addCart ({...product, amount: amoun}) 
+        setIsCount (false)  
       }
       
 
