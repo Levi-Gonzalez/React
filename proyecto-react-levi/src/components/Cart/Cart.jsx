@@ -10,7 +10,7 @@ const Cart = () => {
                 phone:''
       })
 
-      const {cartList, emptyCart, deleteCart, priceTotal} = useCartContext ()
+      const {cartList, emptyCart, deleteProduct, priceTotal} = useCartContext ()
     
       const saveOrder = (e) => {
         e.preventDefault ()
@@ -32,7 +32,7 @@ const Cart = () => {
           addDoc (queryOrders, order)
           .then (resp => setId(resp.id))
           .finally (()=> setFormApp ({
-                                    email:'',
+            email:'',
                                     name:'',
                                     phone:''
           
@@ -45,19 +45,20 @@ const Cart = () => {
       <div>     
         <ul>
             {cartList?.map(prod =>( 
-                <div key={prod.id}>
+              <div key={prod.id}>
                             <div>
                               <img src={prod.image} alt="image prod" className='w-25'/> 
                             </div>
                             <div>
                             {prod.name}              
-                            </div>
+                      </div>
                               <div>
                               amount: {prod.amount} 
                               </div>
                               <div>
                               price: {prod.price * prod.amount}
-                                </div> 
+                              </div> 
+                              <button type="button" className="btn-close m-3" aria-label="Close" onClick={ () => deleteProduct (prod.id) }> </button>
                       <div>
                         <div className="row">
                         </div>
@@ -66,16 +67,43 @@ const Cart = () => {
                 </div>
           ))}
         </ul>
-        <p>{priceTotal () !== 0 && `Total Price: $${priceTotal ()}`}</p>
-        <div>
-          <button className="m-3" onClick={emptyCart}>Delete Cart </button>
+        <div class="row g-3 align-items-center">
+        <div className="cartbuy">
+         <div>
+            <button className=" btn btn-dark " onClick={emptyCart}>Delete Cart </button>
+          </div>                     
+          <div>
+            <button className=" btn btn-primary cart" onClick={saveOrder}>Shopping Generator</button>
+          </div>
         </div>
 
-        <div>
-          <button onClick={saveOrder}>Shopping Generator</button>
-        </div>
-
+          <h5>{priceTotal () !== 0 && `Total Price: $${priceTotal ()}`}</h5>
+        
+         
       </div>
+      <h2 className="form">Form</h2>
+
+    <label for="exampleInputEmail1" className="form-label">Email address</label>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+
+
+  <div className="col-auto">
+    <label for="inputPassword6" className="col-form-label">Password</label>
+  </div>
+
+  <div className="col-auto">
+    <input type="password" id="inputPassword6" className="form-control" aria-describedby="passwordHelpInline"/>
+  </div>
+  
+  <div className="col-auto">
+    <span id="passwordHelpInline" className="form-text">
+      Must be 8-20 characters long.
+    </span>
+  </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</div>
     ) 
 }
 

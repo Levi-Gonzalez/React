@@ -28,7 +28,7 @@ import {createContext, useContext, useState } from "react";
         }
 
         const emptyCart = () => {
-            setCartList ([])   // creamos un array vacío para limpiar el carrito
+            setCartList ([]) 
         }
 
         const priceTotal = () => {
@@ -42,7 +42,7 @@ import {createContext, useContext, useState } from "react";
         }
         return (
             <CartContext.Provider value={{
-                cartList, //👀 este siempre nos da el  actualizado en tiempo real
+                cartList, 
                 addCart,
                 emptyCart, 
                 priceTotal,

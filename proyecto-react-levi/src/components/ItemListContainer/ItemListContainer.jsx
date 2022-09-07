@@ -5,7 +5,7 @@ import {collection, getDocs, getFirestore, query, where} from 'firebase/firestor
 import { ItemList } from "../ItemList/ItemList";
 
 
- const ItemListContainer = ({saludo}) => { 
+ const ItemListContainer = ({ }) => { 
 
   const [products, setProducts] = useState({})
   const [loading, setLoading] = useState (true)
@@ -28,12 +28,13 @@ import { ItemList } from "../ItemList/ItemList";
         { loading 
           ?
           <div className="loader">
-          <div className="face">
-              <div className="circle"></div>
-          </div>
-          <div className="face">
-              <div className="circle"></div>
-          </div>
+            <div className="face">
+               <div className="circle"></div>
+            </div>
+          
+            <div className="face">
+                 <div className="circle"></div>
+            </div>
           </div>
 
           : <div>

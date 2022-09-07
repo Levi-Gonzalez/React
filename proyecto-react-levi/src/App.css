@@ -192,3 +192,13 @@ color: rgb(80, 249, 204);
 .women:hover{
   color:rgb(254, 72, 194);
 }
+
+.cartbuy {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin: 10px;
+}
+.form{
+  margin: 40px;
+}

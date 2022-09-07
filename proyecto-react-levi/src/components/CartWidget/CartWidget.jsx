@@ -2,7 +2,7 @@
 function CartWidget() {
   return (
     <div className='cartImage'>
-      <img className='imageCart' src="./src/assets/logo-cart/cart3.png" alt="Cart" />
+      <img className='imageCart' src="https://drive.google.com/file/d/19XpikOl8vDLLlxKrLYH75yygY60fak1s/view?usp=sharing" alt="Cart" />
     </div>
   )
 }
