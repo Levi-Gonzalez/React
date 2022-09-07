@@ -200,5 +200,8 @@ color: rgb(80, 249, 204);
   margin: 10px;
 }
 .form{
-  margin: 40px;
+  margin-top: 40px;
+}
+.totalPrice{
+  padding: 0.30vh;
 }
