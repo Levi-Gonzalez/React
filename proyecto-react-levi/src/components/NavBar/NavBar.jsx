@@ -21,7 +21,7 @@ const NavBar = () => {
                 <div className ="offcanvas-header">
                   <button type="button" className ="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-
+             
               <div className ="offcanvas-body">
                 <ul className ="navbar-nav justify-content-start flex-grow-1 pe-3">                    
                     <div className="navegate">

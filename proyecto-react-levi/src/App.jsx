@@ -18,16 +18,15 @@ function App() {
            <Routes> 
               <Route index  path='/' element = {<ItemListContainer/> } />
               <Route path='/category/:categoryId' element={<ItemListContainer/> } />
-              <Route path='*' element = {<Navigate to='/' /> } />
               <Route path='/detail/:detailId' element={<ItemDetailContainer /> } />
               <Route path='/cart'element ={<Cart/>} />
+              <Route path='*' element = {<Navigate to='/' /> } />
            </Routes> 
        </div>
     </CartContextProvider>
 </BrowserRouter>
   
-     )
-  
-    }
+)
+}
     
 export default App

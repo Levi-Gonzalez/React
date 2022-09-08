@@ -20,8 +20,7 @@ import {createContext, useContext, useState } from "react";
                                 
                     setCartList([     
                         ...cartList, 
-
-                            prod
+                        prod
                     ])
                     
             }       
